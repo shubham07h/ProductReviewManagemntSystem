@@ -21,5 +21,20 @@ namespace ProductReview
 
             }
         }
+        public static void RetrieveRecords(List<Product> productReviewList)
+        {
+            var productdata = (from reviewlist in productReviewList
+                               where reviewlist.ProductID == 4 || reviewlist.ProductID == 9 || reviewlist.ProductID == 1
+                                && reviewlist.Rating > 3
+                               select reviewlist);
+
+            foreach (var list in productdata)
+            {
+                Console.WriteLine("ProductId:" + list.ProductID + " " + "Userid:" + list.Userid + " " +
+                    "Rating:" + list.Rating + " " + " Review:" + list.Review + " " + "IsLike:" + list.IsLike);
+
+
+            }
+        }
     }
 }

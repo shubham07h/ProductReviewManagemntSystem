@@ -41,9 +41,10 @@ namespace ProductReview
         new Product{ProductID = 25, Userid = 25, Rating = 4, Review = "Nice", IsLike = true},
         };
 
-            ProductManagement.Top3Records(product);
+            ProductManagement.RetrieveRecords(product);
 
 
         }
     }
 }
+
